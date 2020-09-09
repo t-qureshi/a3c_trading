@@ -21,8 +21,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      # # docker build ./python aimvector/python:1.0.0
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          docker build ./python aimvector/python:1.0.0
+          docker build . -t CI
